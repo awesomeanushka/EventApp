@@ -130,6 +130,12 @@ public class SigninActivity extends AppCompatActivity {
                 .requestEmail()
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+        findViewById(R.id.sign_in_google).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                signIn();
+            }
+        });
     }
 
     private void signIn() {
