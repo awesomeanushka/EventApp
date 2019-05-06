@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "518070627578",
+    "firebase_url": "https://awesomeanushka-9c20d.firebaseio.com",
+    "project_id": "awesomeanushka-9c20d",
+    "storage_bucket": "awesomeanushka-9c20d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518070627578:android:12c295419eba6de4",
+        "android_client_info": {
+          "package_name": "com.example.android.eventmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518070627578-nst47tgimi7sa3oht088ue6n4psjti16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMjIL3gZTF8nLm47-JiYCpBqh4CFiEKUs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518070627578-nst47tgimi7sa3oht088ue6n4psjti16.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
