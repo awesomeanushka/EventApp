@@ -3,7 +3,6 @@ package com.example.android.eventmanager;
 
 import android.os.Bundle;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -19,7 +18,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-public class signup_activity extends AppCompatActivity {
+public class SignupActivity extends AppCompatActivity {
 
     private EditText name, email_id, passwordcheck;
     private FirebaseAuth mAuth;
@@ -33,7 +32,7 @@ public class signup_activity extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(signup_activity.this, signin.class);
+                Intent intent = new Intent(SignupActivity.this, SigninActivity.class);
                 startActivity(intent);
             }
         });
@@ -57,7 +56,7 @@ public class signup_activity extends AppCompatActivity {
                 }
                 progressBar.setVisibility(View.VISIBLE);
                 mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(signup_activity.this, new OnCompleteListener<AuthResult>() {
+                        .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressBar.setVisibility(View.GONE);
@@ -65,13 +64,13 @@ public class signup_activity extends AppCompatActivity {
                                     // Sign in success, update UI with the signed-in user's information
                                     Log.d(TAG, "createUserWithEmail:success");
                                     FirebaseUser user = mAuth.getCurrentUser();
-                                    Intent intent = new Intent(signup_activity.this, MainActivity.class);
+                                    Intent intent = new Intent(SignupActivity.this, MainActivity.class);
                                     startActivity(intent);
                                     finish();
                                 } else {
                                     // If sign in fails, display a message to the user.
                                     Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                                    Toast.makeText(signup_activity.this, "Authentication failed.",
+                                    Toast.makeText(SignupActivity.this, "Authentication failed.",
                                             Toast.LENGTH_SHORT).show();
                                 }
                             }

@@ -32,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if (firebaseAuth.getCurrentUser()==null)
                 {
-                    startActivity(new Intent(MainActivity.this, signin.class));
+                    startActivity(new Intent(MainActivity.this, SigninActivity.class));
+                }else{
+                    startActivity(new Intent(MainActivity.this, EventListActivity.class));
                 }
             }
         };

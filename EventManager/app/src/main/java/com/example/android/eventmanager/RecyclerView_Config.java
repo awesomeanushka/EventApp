@@ -12,10 +12,10 @@ import java.util.List;
 
 public class RecyclerView_Config {
     private Context mContext;
-    private eventadapter meventadapter;
+    private EventAdapter meventadapter;
     public void setConfig(RecyclerView recyclerView,Context context,List<Eventdata> even,List<String> keys){
         mContext =context;
-        meventadapter=new eventadapter(even,keys);
+        meventadapter=new EventAdapter(even,keys);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         recyclerView.setAdapter(meventadapter);
 
@@ -43,12 +43,12 @@ public class RecyclerView_Config {
         }
 
     }
-    class eventadapter extends RecyclerView.Adapter<EventItemView>
+    class EventAdapter extends RecyclerView.Adapter<EventItemView>
     {
         private List<Eventdata> meventList;
         private List<String> mkeys;
 
-        public eventadapter(List<Eventdata> meventList, List<String> mkeys) {
+        public EventAdapter(List<Eventdata> meventList, List<String> mkeys) {
             this.meventList = meventList;
             this.mkeys = mkeys;
         }
