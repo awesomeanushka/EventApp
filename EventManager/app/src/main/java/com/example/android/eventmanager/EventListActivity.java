@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 
+import com.google.firebase.database.FirebaseDatabase;
 import com.smarteist.autoimageslider.DefaultSliderView;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.SliderAnimations;
@@ -41,33 +42,28 @@ public class EventListActivity extends AppCompatActivity {
 
         sliderLayout.setSliderTransformAnimation(SliderAnimations.FADETRANSFORMATION);
 
-        sliderLayout.setScrollTimeInSec(5); //set scroll delay in seconds :
+        sliderLayout.setScrollTimeInSec(4); //set scroll delay in seconds :
 
         setSliderViews();
 
 
         mRecyclerView =(RecyclerView) findViewById(R.id.recyclerview_events);
-//        (new FirebaseDatabaseHelper()).readEvent(new FirebaseDatabaseHelper.DataStatus() {
-//            @Override
-//            public void DataIsLoaded(List<Eventdata> events, List<String> keys) {
-//                new RecyclerView_Config().setConfig(mRecyclerView, EventListActivity.this, events, keys);
-//            }
-//
-//            @Override
-//            public void DataIsInserted() {
-//
-//            }
-//
-//            @Override
-//            public void DataIsUpdated() {
-//
-//            }
-//
-//            @Override
-//            public void DataIsDeleted() {
-//
-//            }
-//        });
+       (new FirebaseDatabaseHelper(FirebaseDatabase.getInstance())).readEvent(new FirebaseDatabaseHelper.DataStatus() {
+            @Override
+            public void DataIsLoaded(List<Eventdata> events, List<String> keys) {
+                new RecyclerView_Config().setConfig(mRecyclerView, EventListActivity.this, events, keys);
+           }
+
+            @Override
+           public void DataIsInserted() {
+           }
+           @Override
+            public void DataIsUpdated() {
+            }
+            @Override
+            public void DataIsDeleted() {
+            }
+       });
     }
     private void setSliderViews() {
 

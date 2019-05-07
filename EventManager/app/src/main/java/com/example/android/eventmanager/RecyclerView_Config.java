@@ -55,7 +55,6 @@ public class RecyclerView_Config {
 
         @Override
         public void onBindViewHolder(@NonNull EventItemView holder, int position, @NonNull List<Object> payloads) {
-
         }
 
         @NonNull
