@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -27,7 +28,7 @@ public class RecyclerView_Config {
         private TextView cname;
         private TextView cdate;
         private TextView clocation;
-        private String key;;
+        private String key;
 
         public EventItemView(View itemView){
             super(itemView);
@@ -60,13 +61,31 @@ public class RecyclerView_Config {
         public EventItemView onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
             final View listItem = layoutInflater.inflate(R.layout.eventist_item, parent, false);
+
             EventItemView viewHolder = new EventItemView(listItem);
+
             return viewHolder;
         }
 
         @Override
-        public void onBindViewHolder(@NonNull EventItemView eventItemView, int i) {
+        public void onBindViewHolder(@NonNull final EventItemView eventItemView, int i) {
             eventItemView.setEventdata(mEventList.get(i), mkeys.get(i));
+
+            eventItemView.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if((eventItemView.cname.getText().toString()).equals("cognizance"))
+                    Toast.makeText(mContext,"Show your text here",Toast.LENGTH_SHORT).show();
+                    else if((eventItemView.cname).equals("tryst"))
+                    {
+                        Toast.makeText(mContext,"Show your text here",Toast.LENGTH_SHORT).show();
+                    }
+                    else
+                    {
+                        Toast.makeText(mContext,"not work"+eventItemView.cname,Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
         }
 
         @Override

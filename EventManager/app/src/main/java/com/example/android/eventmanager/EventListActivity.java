@@ -67,21 +67,23 @@ public class EventListActivity extends AppCompatActivity {
 
 
     private void setSliderViews() {
-        for (int i = 0; i <= 3; i++) {
+        for (int i = 0; i <= 4; i++) {
             DefaultSliderView sliderView = new DefaultSliderView(this);
             switch (i) {
                 case 0:
-                    sliderView.setImageDrawable(R.drawable.ic_launcher_background);
+                    sliderView.setImageDrawable(R.drawable.slider2);
                     break;
                 case 1:
-                    sliderView.setImageUrl("https://images.pexels.com/photos/218983/pexels-photo-218983.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+                    sliderView.setImageDrawable(R.drawable.sider1);
                     break;
                 case 2:
-                    sliderView.setImageUrl("https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+                    sliderView.setImageDrawable(R.drawable.slider3);
                     break;
                 case 3:
-                    sliderView.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+                    sliderView.setImageDrawable(R.drawable.slider4);
                     break;
+                case 4:
+                    sliderView.setImageDrawable(R.drawable.slider5);
             }
 
             sliderView.setImageScaleType(ImageView.ScaleType.CENTER_CROP);
