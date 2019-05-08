@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="\nAbout the Fest:\n
+Through its theme “Unwinding Chaos”, Cognizance 2019 aims to provide a platform full of opportunities to learn and experiment with the canvas of life and to paint whatever agitates the sleep of enthusiastic youth populace of India. The team believes that every step, no matter how tiny, eventually adds up to generate a wave of something that can be enormous.
+
+\nAttractions:\n
+The events cover a wide range from technical, robotics and gaming to management, including the Literature and Arts Festival, Finance Festival and Innovation Conclave.
+Cognizance also offers a plethora of technical workshops to the students.
+Various Exhibitions and Guest Talks will also be organized to engage the students in the three-day technical extravaganza.
+\nEligibility:\n
+The participant must be a student enrolled in an Undergraduate or Postgraduate program.
+
+\nRegistration fee:\n
+Registration fee with accommodation is Rs 2100 and Rs 1400 without accommodation plus taxes.
+Caution money is Rs 200, payable in cash only which will be refunded to you only after the fest. Once paid, the fee is non-refundable.
+There will be extra charges for workshops according to the choice of workshop.
+\nContact:\n
+Email: info@cognizance.org.in
+Call: +91-8770522677 +91-8449486573"
+    android:textColor="#000"/>
+</android.support.constraint.ConstraintLayout>
