@@ -1,6 +1,7 @@
 package com.example.android.eventmanager;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -74,9 +75,11 @@ public class RecyclerView_Config {
             eventItemView.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if((eventItemView.cname.getText().toString()).equals("cognizance"))
-                    Toast.makeText(mContext,"Show your text here",Toast.LENGTH_SHORT).show();
-                    else if((eventItemView.cname).equals("tryst"))
+                    if((eventItemView.cname.getText().toString()).equals("cognizance")) {
+                        Intent intent = new Intent(mContext, cognizance.class);
+                        mContext.startActivities(new Intent[]{intent});
+                    }
+                    else if((eventItemView.cname.getText().toString()).equals("tryst"))
                     {
                         Toast.makeText(mContext,"Show your text here",Toast.LENGTH_SHORT).show();
                     }
